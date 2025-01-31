@@ -1,0 +1,7 @@
+{
+  "name": "Convert to MOV",
+  "description": "Converts input files to MOV",
+
+  "command": "y -i ${INPUT_FILE} ${OUTPUT_FILE}",
+  "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mov"
+}
