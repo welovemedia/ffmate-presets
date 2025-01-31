@@ -1,0 +1,25 @@
+name: Build and upload to S3
+
+on: [pull_request, push]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install jq
+        uses: dcarbone/install-jq-action@v3
+      
+      - name: Build presets
+        run: make build
+
+      - uses: shallwefootball/s3-upload-action@master
+        if: github.ref == 'refs/heads/main'
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          endpoint: ${{ secrets.AWS_ENDPOINT }}
+          aws_bucket: ${{ secrets.AWS_BUCKET }}
+          source_dir: 'build'
+          destination_dir: '_presets'

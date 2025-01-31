@@ -1,0 +1,6 @@
+{
+  "name": "Convert to 120fps",
+  "description": "Converts input files to 120fps",
+  "command": "y -i ${INPUT_FILE} -r 120 ${OUTPUT_FILE}",
+  "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mov"
+}

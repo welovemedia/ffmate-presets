@@ -1,0 +1,26 @@
+{
+  /* Optional name of the preset */
+  "name": "{{$randomCompanyName}}",
+  /* Optional description of the preset */
+  "description": "{{$randomCatchPhrase}}",
+  /* Mandatory command of the preset */
+  "command": "-y -i ${INPUT_FILE} ${OUTPUT_FILE}",
+  /* Optional priority of the preset */
+  "priority": 69,
+  /* Optional outputFile of the preset */
+  "outputFile": "/tmp/myWf_out/${INPUT_FILE_BASENAME}_wf_out.mov",
+  /* Optional preProcessor of the preset */
+  "preProcessing": {
+    /* Optional scriptPath of the preProcesseor */
+    "scriptPath": "uptime && sleep 3",
+    /* Optional sidecarPath of the preProcesseor (runs before scriptPath) */
+    "sidecarPath": "${OUTPUT_FILE}_pre.json"
+  },
+  /* Optional postProcessor of the preset */
+  "postProcessing": {
+    /* Optional scriptPath of the postProcesseor */
+    "scriptPath": "uptime && sleep 3",
+    /* Optional sidecarPath of the postProcesseor (runs before scriptPath) */
+    "sidecarPath": "${OUTPUT_FILE}_pre.json"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Twitch Encoding",
+  "description": "Optimized settings for Twitch uploads",
+  "command": "-i ${INPUT_FILE} -c:v libx264 -preset medium -crf 17 -maxrate 6000k -bufsize 12000k -c:a aac -b:a 192k -vf \"scale=1920:1080,format=yuv420p\" -movflags +faststart ${OUTPUT_FILE}",
+  "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mp4"
+}
