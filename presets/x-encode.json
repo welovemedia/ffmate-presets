@@ -1,0 +1,6 @@
+{
+  "name": "X Encoding",
+  "description": "High-quality H.264 encoding for X uploads",
+  "command": "-i ${INPUT_FILE} -c:v libx264 -preset medium -crf 20 -c:a aac -b:a 192k -vf \"scale=1280:720,format=yuv420p\" -movflags +faststart ${OUTPUT_FILE}",
+  "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mp4"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Convert to MXF",
+  "description": "Converts MOV files to MXF",
+  "command": "-i ${INPUT_FILE} -map 0 -c copy ${OUTPUT_FILE}",
+  "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mxf"
+}

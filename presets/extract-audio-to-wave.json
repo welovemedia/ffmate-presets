@@ -1,0 +1,6 @@
+{
+  "name": "Extract Audio to Wave PCM",
+  "description": "Extracts the audio stream from a video file and converts it to Wave PCM format",
+  "command": "-i ${INPUT_FILE} -vn -acodec pcm_s16le ${OUTPUT_FILE}",
+  "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.wav"
+}

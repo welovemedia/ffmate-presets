@@ -1,0 +1,6 @@
+{
+  "name": "Extract Audio to MP3",
+  "description": "Extracts the audio stream from a video file and converts it to MP3",
+  "command": "-i ${INPUT_FILE} -vn -acodec libmp3lame -q:a 2 ${OUTPUT_FILE}",
+  "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mp3"
+}
