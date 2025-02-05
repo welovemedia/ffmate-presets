@@ -13,11 +13,9 @@ jobs:
       
       - name: Build presets
         run: make build
-      
-      - name: Test build
-        run: cat build/index.json
 
       - uses: shallwefootball/s3-upload-action@master
+        if: github.ref == 'refs/heads/main'
         with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
