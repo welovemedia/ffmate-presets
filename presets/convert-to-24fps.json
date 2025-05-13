@@ -1,6 +1,6 @@
 {
   "name": "Convert to 24fps",
   "description": "Converts input files to 24fps",
-  "command": "y -i ${INPUT_FILE} -r 24 ${OUTPUT_FILE}",
+  "command": "-y -i ${INPUT_FILE} -r 24 ${OUTPUT_FILE}",
   "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mov"
 }

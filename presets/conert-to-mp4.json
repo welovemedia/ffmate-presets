@@ -2,6 +2,6 @@
   "name": "Convert to MP4",
   "description": "Converts input files to MP4",
 
-  "command": "y -i ${INPUT_FILE} ${OUTPUT_FILE}",
+  "command": "-y -i ${INPUT_FILE} ${OUTPUT_FILE}",
   "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mp4"
 }

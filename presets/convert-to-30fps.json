@@ -1,6 +1,6 @@
 {
   "name": "Convert to 30fps",
   "description": "Converts input files to 30fps",
-  "command": "y -i ${INPUT_FILE} -r 30 ${OUTPUT_FILE}",
+  "command": "-y -i ${INPUT_FILE} -r 30 ${OUTPUT_FILE}",
   "outputFile": "${INPUT_FILE_DIR}/${INPUT_FILE_BASENAME}.mov"
 }
